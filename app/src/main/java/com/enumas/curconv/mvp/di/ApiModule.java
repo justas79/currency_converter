@@ -13,9 +13,6 @@ import retrofit2.converter.gson.GsonConverterFactory;
 @Module
 public class ApiModule {
 
-    //    //feddbcb0162c117e8a1503692aad99c9
-    //    //http://data.fixer.io/api/latest?access_key=feddbcb0162c117e8a1503692aad99c9
-    public static final String CURRENCY_URL = "http://data.fixer.io/api/latest?access_key=feddbcb0162c117e8a1503692aad99c9";
     public static final String CURRENCY_URL_BASE = "http://data.fixer.io/";
     public static final String ACCESS_KEY = "feddbcb0162c117e8a1503692aad99c9";
 

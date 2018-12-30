@@ -20,7 +20,7 @@
         android:layout_column="0"
         android:layout_columnSpan="1"
         android:layout_columnWeight="1"
-        android:text="Amount of "
+        android:text="@string/amount_of"
         android:textSize="15dp" />
 
     <EditText
@@ -42,7 +42,7 @@
         android:layout_row="1"
         android:layout_column="0"
         android:layout_gravity="fill_horizontal"
-        android:text="From this currency"
+        android:text="@string/from_this_currency"
         android:textSize="15dp" />
 
     <TextView
@@ -54,18 +54,14 @@
         android:textSize="15dp"
         tools:text="EUR" />
 
-
-
-
     <TextView
         android:id="@+id/txt_to"
         android:layout_width="0dp"
         android:layout_row="4"
         android:layout_column="0"
         android:layout_gravity="fill_horizontal"
-        android:text="To this currency"
+        android:text="@string/to_this_currency"
         android:textSize="15dp" />
-
 
     <TextView
         android:id="@+id/txt_to_code"
@@ -82,7 +78,7 @@
         android:layout_row="5"
         android:layout_column="0"
         android:layout_gravity="fill_horizontal"
-        android:text="With this rate"
+        android:text="@string/with_this_rate"
         android:textSize="15dp" />
 
     <TextView
@@ -100,7 +96,7 @@
         android:layout_row="6"
         android:layout_column="0"
         android:layout_gravity="fill_horizontal"
-        android:text="Result"
+        android:text="@string/result"
         android:textStyle="bold"
         android:textSize="20dp" />
 
@@ -119,7 +115,7 @@
         android:id="@+id/btn_invert"
         android:layout_width="match_parent"
         android:layout_row="7"
-        android:text="Invert Conversion"
+        android:text="@string/invert_conversion"
         android:drawableRight="@drawable/invertitem"
         android:drawableLeft="@drawable/invertitem"
         android:drawablePadding="6dp"

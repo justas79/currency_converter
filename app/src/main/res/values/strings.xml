@@ -4,4 +4,10 @@
 
 
     <string name="action_refresh_currencies">Refresh</string>
+    <string name="amount_of">Amount of</string>
+    <string name="from_this_currency">From this currency</string>
+    <string name="to_this_currency">To this currency</string>
+    <string name="with_this_rate">With this rate</string>
+    <string name="result">Result</string>
+    <string name="invert_conversion">Invert Conversion</string>
 </resources>

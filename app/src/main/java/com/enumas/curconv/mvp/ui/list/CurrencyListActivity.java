@@ -15,7 +15,6 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.curencyconv.enumas.currencyconverter.R;
-import com.enumas.curconv.mvp.data.model.Currency;
 import com.enumas.curconv.mvp.data.network.CurrencyNetworkApi;
 import com.enumas.curconv.mvp.di.App;
 import com.enumas.curconv.mvp.ui.converter.CurrencyConverterActivity;
@@ -134,11 +133,6 @@ public class CurrencyListActivity extends AppCompatActivity implements CurrencyL
     @Override
     public void stopProgress() {
         progressCircular.setVisibility(View.GONE);
-    }
-
-    @Override
-    public void setBaseCurrency(Currency currency) {
-        Log.e(CurrencyListActivity.class.getName(), "base currency change not implemented");
     }
 
     @Override

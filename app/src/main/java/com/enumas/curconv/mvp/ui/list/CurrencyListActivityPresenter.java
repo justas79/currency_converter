@@ -55,20 +55,6 @@ public class CurrencyListActivityPresenter implements CurrencyListMvp.Presenter 
                                });
     }
 
-    @Override
-    public void refreshCurrencyRatesAction() {
-
-//        if (view != null) {
-//            view.updateCurrencyList();
-//        }
-
-    }
-
-    @Override
-    public void showNetworkError() {
-
-    }
-
     /**
      *  Make sure unsubscribe subscription from observable to avoid memory leaks etc.
      */
