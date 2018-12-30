@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.enumas.curconv.mvp.ui.list.CurrencyListActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <!-- circular progress -->
+    <include layout="@layout/content_progress" />
+
+    <TextView
+        android:id="@+id/txt_base_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Base Currency : EUR"
+        android:textStyle="bold"
+        android:layout_marginTop="75dp"
+        android:textSize="25dp"
+        android:paddingLeft="25dp"
+        android:textColor="#000000"
+        android:layout_gravity="top|left" />
+
+    <!-- tools:listitem="@layout/currency_list_row" -->
+    <android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:clipToPadding="false"
+        android:scrollbars="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:listitem="@layout/currency_list_row"
+
+        />
+
+</android.support.design.widget.CoordinatorLayout>

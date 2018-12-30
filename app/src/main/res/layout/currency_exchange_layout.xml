@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="top"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:alignmentMode="alignBounds"
+    android:columnCount="2"
+    android:columnOrderPreserved="false"
+    android:orientation="horizontal"
+    android:padding="5dp"
+    android:useDefaultMargins="true">
+
+    <TextView
+        android:id="@+id/txt_view"
+        android:layout_row="0"
+        android:layout_column="0"
+        android:layout_columnSpan="1"
+        android:layout_columnWeight="1"
+        android:text="Amount of "
+        android:textSize="15dp" />
+
+    <EditText
+        android:id="@+id/edit_amount"
+        android:layout_width="0dp"
+        android:maxLength="15"
+        android:layout_column="1"
+        android:layout_columnWeight="1"
+        android:layout_weight="1"
+        android:inputType="numberDecimal"
+        android:layout_row="0"
+        android:textSize="15dp"
+        tools:text="100343" />
+
+
+    <TextView
+        android:id="@+id/txt_fromthis"
+        android:layout_width="0dp"
+        android:layout_row="1"
+        android:layout_column="0"
+        android:layout_gravity="fill_horizontal"
+        android:text="From this currency"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/txt_fromthis_code"
+        android:layout_width="0dp"
+        android:layout_row="1"
+        android:layout_gravity="fill_horizontal"
+        android:width="0dp"
+        android:textSize="15dp"
+        tools:text="EUR" />
+
+
+
+
+    <TextView
+        android:id="@+id/txt_to"
+        android:layout_width="0dp"
+        android:layout_row="4"
+        android:layout_column="0"
+        android:layout_gravity="fill_horizontal"
+        android:text="To this currency"
+        android:textSize="15dp" />
+
+
+    <TextView
+        android:id="@+id/txt_to_code"
+        android:layout_width="0dp"
+        android:layout_row="4"
+        android:layout_column="1"
+        android:layout_gravity="fill_horizontal"
+        android:textSize="15dp"
+        tools:text="United Arab Emirates Dirham" />
+
+    <TextView
+        android:id="@+id/txt_withrate"
+        android:layout_width="0dp"
+        android:layout_row="5"
+        android:layout_column="0"
+        android:layout_gravity="fill_horizontal"
+        android:text="With this rate"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/txt_withrate_value"
+        android:layout_width="0dp"
+        android:layout_row="5"
+        android:layout_column="1"
+        android:layout_gravity="fill_horizontal"
+        android:textSize="15dp"
+        tools:text="1.234" />
+
+    <TextView
+        android:id="@+id/txt_result"
+        android:layout_width="0dp"
+        android:layout_row="6"
+        android:layout_column="0"
+        android:layout_gravity="fill_horizontal"
+        android:text="Result"
+        android:textStyle="bold"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/txt_result_value"
+        android:layout_width="0dp"
+        android:layout_row="6"
+        android:layout_column="1"
+        android:layout_gravity="fill_horizontal"
+        android:autoSizeTextType="uniform"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        tools:text="12.434" />
+
+    <Button
+        android:id="@+id/btn_invert"
+        android:layout_width="match_parent"
+        android:layout_row="7"
+        android:text="Invert Conversion"
+        android:drawableRight="@drawable/invertitem"
+        android:drawableLeft="@drawable/invertitem"
+        android:drawablePadding="6dp"
+        android:layout_gravity="bottom"
+        android:layout_columnSpan="2" />
+
+</GridLayout>
+
+

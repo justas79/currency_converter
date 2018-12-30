@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:background="?android:selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/textview_currency_code"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:ellipsize="end"
+        android:gravity="start"
+        android:paddingLeft="25dp"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:textColor="#000000"
+        android:textSize="25dp"
+        tools:text="USD" />
+
+
+    <TextView
+        android:id="@+id/textview_currency_rate"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:textAppearance="?attr/textAppearanceSearchResultSubtitle"
+        android:textColor="#000000"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        tools:text="1.110" />
+
+    <ImageView
+        android:id="@+id/imgview_flag"
+        tools:src="@tools:sample/avatars"
+        android:padding="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
