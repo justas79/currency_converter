@@ -6,18 +6,16 @@ This is a carcass of Android app with the purpose to illustrate skills and pract
 
 ![Screenshot](screenshot1.png?raw=true "Currency Converter")
 
-link(to image)
-
 ## Development
 
-Used following 3rd party libraries:
+Using following 3rd party libraries:
 - Retrofit
 - RxJava2
 - Picasso
 - Dagger
 - Butterknife
 
-Uses MVP pattern to separate layers.
+Using MVP pattern to separate layers.
 
 ### Installing dependencies
 
