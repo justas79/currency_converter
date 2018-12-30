@@ -17,7 +17,5 @@ Using following 3rd party libraries:
 
 Using MVP pattern to separate layers.
 
-### Installing dependencies
-
 ## Team
 [Justas Batulevicius] - Software Engineer
