@@ -4,6 +4,8 @@
 
 This is a carcass of Android app with the purpose to illustrate skills and practices of Android development. 
 
+![Screenshot](screenshot1.png?raw=true "Currency Converter")
+
 link(to image)
 
 ## Development
