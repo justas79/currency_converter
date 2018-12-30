@@ -1,5 +1,8 @@
 package com.enumas.curconv.mvp.ui.converter;
 
+/**
+ * MVP wrapper for currency converter activity
+ */
 public interface CurrencyConverterMvp {
 
     interface View {
@@ -9,14 +12,13 @@ public interface CurrencyConverterMvp {
         String getSelectedDisplay();
         Double getAmount();
 
-        String getRateDisplay();
         void setBaseDisplay(String s);
         void setSelectedDisplay(String s);
         void setRateDisplay(String s);
         void setResult(String s);
         void setAmount(String s);
-        void logIssue(String s);
 
+        void logIssue(String s);
         void logDebug(String s);
     }
 
@@ -28,7 +30,7 @@ public interface CurrencyConverterMvp {
     }
 
     interface Model {
-        void setSelectedRate(String rate);
         String getSelectedRate();
+        void setSelectedRate(String rate);
     }
 }

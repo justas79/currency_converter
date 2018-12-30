@@ -10,8 +10,7 @@ import io.reactivex.Single;
 import static com.enumas.curconv.mvp.di.ApiModule.ACCESS_KEY;
 
 /**
- * Repo, for getting rates from network.
- * Possible enhancements : implement cache, add offline support etc.
+ * @see com.enumas.curconv.mvp.data.CurrencyRepo
  */
 public class CurrencyRepoImpl implements CurrencyRepo {
 

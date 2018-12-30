@@ -46,6 +46,9 @@ public class Utils {
         return format.format(rateD);
     }
 
+    /**
+     * Creates message for display base info in currency list
+     */
     public static String getBaseInfo(RateListResponse r) {
         return getDisplayCurrencyFull(r.getBase());
     }

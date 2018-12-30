@@ -35,24 +35,29 @@ public class CurrencyListActivityPresenter implements CurrencyListMvp.Presenter 
     @Override
     public void loadData() {
         view.startProgress();
-        subscription = model.getRates()
-                .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribeWith(new DisposableSingleObserver<RateListResponse>() {
-                                   @Override
-                                   public void onSuccess(RateListResponse r) {
-                                       List<CurrencyListItemModel> items = CurrencyConverterMapper.getListItems(r);
-                                       view.updateCurrencyList(items);
-                                       view.updateBaseInfo(Utils.getBaseInfo(r));
-                                       view.stopProgress();
-                                   }
+        try {
+            subscription = model.getRates()
+                    .subscribeOn(Schedulers.io())
+                    .observeOn(AndroidSchedulers.mainThread())
+                    .subscribeWith(new DisposableSingleObserver<RateListResponse>() {
+                        @Override
+                        public void onSuccess(RateListResponse r) {
+                            List<CurrencyListItemModel> items = CurrencyConverterMapper.getListItems(r);
+                            view.updateCurrencyList(items);
+                            view.updateBaseInfo(Utils.getBaseInfo(r));
+                            view.stopProgress();
+                        }
 
-                                   @Override
-                                   public void onError(Throwable e) {
-                                       view.displayUnableToFetchCurrencies();
-                                       view.stopProgress();
-                                   }
-                               });
+                        @Override
+                        public void onError(Throwable e) {
+                            view.logIssue("Could not fetch currencies from network. Sorry...");
+                            view.stopProgress();
+                        }
+                    });
+        } catch (Exception e) {
+            view.stopProgress();
+            view.logIssue("Could not fetch currencies from network. Sorry...");
+        }
     }
 
     /**

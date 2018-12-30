@@ -23,11 +23,14 @@ import java.util.List;
 public class CurrencyListAdapter extends RecyclerView.Adapter<CurrencyListAdapter.ListItemViewHolder> {
 
     /**
-     *
+     *  List of items displayed in recycler view
      */
     List<CurrencyListItemModel> list;
 
 
+    /**
+     * Item click interface for handling click event on activity
+     */
     public interface CurrencyListClickListener {
         void onItemClick(View v, int position);
     }
@@ -57,6 +60,10 @@ public class CurrencyListAdapter extends RecyclerView.Adapter<CurrencyListAdapte
         Picasso.get().load(res).into(listItemViewHolder.itemFlag);
     }
 
+    /**
+     * Returns resource id gy given currency code. Resource id points to flag to display.
+     * If resource (flag) not found - returns blank resource
+     */
     private int getResourceByCurrency(String code, Context context) {
         Resources resources = context.getResources();
 

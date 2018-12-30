@@ -19,6 +19,9 @@ import javax.inject.Inject;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
+/**
+ * Activity where currency conversion to another currency is shown
+ */
 public class CurrencyConverterActivity extends AppCompatActivity implements CurrencyConverterMvp.View {
 
     @BindView(R.id.txt_view)
@@ -115,11 +118,6 @@ public class CurrencyConverterActivity extends AppCompatActivity implements Curr
     @Override
     public Double getAmount() {
         return Double.parseDouble(editAmount.getText().toString());
-    }
-
-    @Override
-    public String getRateDisplay() {
-        return textRateValue.getText().toString();
     }
 
     @Override
