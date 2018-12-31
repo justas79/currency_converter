@@ -29,6 +29,6 @@ public class UnitTests {
     public void testUtilFormat() {
         assertEquals("2.2", Utils.formatRate(2.2));
         assertEquals("2.2", Utils.formatRate(2.20));
-        assertEquals("0.12345", Utils.formatRate(0.12345241234132));
+        assertEquals("0.123456", Utils.formatRate(0.12345641234132));
     }
 }

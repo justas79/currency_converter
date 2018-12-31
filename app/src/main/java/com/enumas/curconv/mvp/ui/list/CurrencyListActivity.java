@@ -18,6 +18,7 @@ import com.enumas.curconv.mvp.data.network.CurrencyNetworkApi;
 import com.enumas.curconv.mvp.di.App;
 import com.enumas.curconv.mvp.ui.converter.CurrencyConverterActivity;
 import com.enumas.curconv.mvp.utils.Constants;
+import com.enumas.curconv.mvp.utils.EspressoIdlingResource;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -50,6 +51,7 @@ public class CurrencyListActivity extends AppCompatActivity implements CurrencyL
 
     @Inject
     CurrencyNetworkApi api;
+
 
     private CurrencyListAdapter listAdapter;
     private List<CurrencyListItemModel> currencyItems = new ArrayList<>();
@@ -103,11 +105,13 @@ public class CurrencyListActivity extends AppCompatActivity implements CurrencyL
     @Override
     public void startProgress() {
         progressCircular.setVisibility(View.VISIBLE);
+        EspressoIdlingResource.increment();
     }
 
     @Override
     public void stopProgress() {
         progressCircular.setVisibility(View.GONE);
+        EspressoIdlingResource.decrement();
     }
 
     @Override
